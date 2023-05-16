@@ -1,0 +1,108 @@
+html {
+    font-size: 12px;
+    height: 500px;
+    width: 400px;
+}
+
+body{
+    padding: 10px;
+}
+
+.control_panel{
+    display: flex;
+    justify-content: space-around;
+}
+
+#power_button{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#reload_button{
+    background-image: url(/img/reload.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#reload_button:hover{
+    transition: 3s;
+    animation: reload_button_animation 3s linear infinite;
+}
+
+@keyframes reload_button_animation {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.search_process{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: 1s;
+}
+
+.visible{
+    opacity: 1;
+    transition: 1s;
+}
+
+.invisible{
+    transition: 1s;
+    opacity: 0;
+}
+
+.search_chrome{
+    width: 100px;
+    margin-left: 120px;
+}
+
+.search_loupe{
+    width: 20%;
+    animation-name: search_loupe_animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1s;
+}
+
+@keyframes search_loupe_animation {
+    from {
+
+    }
+    25%{
+        transform: translate(-100px, 30px);
+    }
+    50%{
+        transform: translate(-20px, -10px);
+    }
+    75%{
+        transform: translate(-30px, 15px);
+    }
+    to {
+        transform: translate(-50px, -20px);;
+    }
+}
+
+.turn_off{
+    background-image: url(/img/power-off.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.turn_on{
+    background-image: url(/img/power-on.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
